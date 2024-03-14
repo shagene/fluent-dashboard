@@ -22,7 +22,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ onToggle }) => {
       // Additional styles for the button itself if needed
     },
     rootHovered: {
-      backgroundColor: theme.palette.neutralLighter, // Adjust hover background as needed
+      backgroundColor: "transparent", // Adjust hover background as needed
     },
   };
 
