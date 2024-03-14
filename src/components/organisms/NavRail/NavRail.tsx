@@ -21,10 +21,10 @@ const NavRail = () => {
   const theme = useTheme();
   const getStyles: IStyleFunctionOrObject<INavStyleProps, INavStyles> = {
     root: {
-      backgroundColor: theme.palette.neutralQuaternaryAlt,
+      backgroundColor: theme.palette.neutralQuaternary,
       color: theme.palette.neutralPrimary,
       height: "100%",
-      width: "16rem",
+      width: "15.625rem",
       boxSizing: "border-box",
       overflowY: "auto",
     },

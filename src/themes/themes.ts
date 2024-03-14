@@ -12,10 +12,10 @@ export const lightTheme = createTheme({
     themeDark: "#005a9e",
     themeDarker: "#004578",
     neutralLighterAlt: "#faf9f8",
-    neutralLighter: "#f3f2f1",
-    neutralLight: "#edebe9",
+    neutralLighter: "#E8E8E8", // Body & Footer
+    neutralLight: "#F4F4F4", // AppBar
     neutralQuaternaryAlt: "#e1dfdd",
-    neutralQuaternary: "#d0d0d0",
+    neutralQuaternary: "#FFF", // NavRail
     neutralTertiaryAlt: "#c8c6c4",
     neutralTertiary: "#a19f9d",
     neutralSecondary: "#605e5c",
@@ -39,10 +39,10 @@ export const darkTheme = createTheme({
     themeDark: "#005ba1",
     themeDarker: "#004377",
     neutralLighterAlt: "#282828",
-    neutralLighter: "#313131",
-    neutralLight: "#3f3f3f",
-    neutralQuaternaryAlt: "#484848",
-    neutralQuaternary: "#4f4f4f",
+    neutralLighter: "#0D0F11", // Body & Footer
+    neutralLight: "#191D23", // AppBar
+    neutralQuaternaryAlt: "#FFF",
+    neutralQuaternary: "#20242A", // NavRail
     neutralTertiaryAlt: "#6d6d6d",
     neutralTertiary: "#c8c8c8",
     neutralSecondary: "#d0d0d0",

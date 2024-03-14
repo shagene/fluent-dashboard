@@ -10,7 +10,7 @@ const Footer = () => {
         alignItems: "center", // This centers the content vertically
         justifyContent: "start", // This aligns the content to the left
         height: "var(--footerHeight)",
-        // backgroundColor: theme.palette.neutralLighter,
+        backgroundColor: theme.palette.neutralLighter,
         color: theme.palette.neutralPrimary,
         paddingLeft: "1rem", // Add some padding on the left side for visual appeal
       }}
