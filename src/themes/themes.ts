@@ -16,7 +16,7 @@ export const lightTheme = createTheme({
     neutralLight: "#F4F4F4", // AppBar
     neutralQuaternaryAlt: "#e1dfdd",
     neutralQuaternary: "#FFF", // NavRail
-    neutralTertiaryAlt: "#c8c6c4",
+    neutralTertiaryAlt: "#c8c6c4", // AppBar Inputs
     neutralTertiary: "#a19f9d",
     neutralSecondary: "#605e5c",
     neutralPrimaryAlt: "#3b3a39",
@@ -43,7 +43,7 @@ export const darkTheme = createTheme({
     neutralLight: "#191D23", // AppBar
     neutralQuaternaryAlt: "#FFF",
     neutralQuaternary: "#20242A", // NavRail
-    neutralTertiaryAlt: "#6d6d6d",
+    neutralTertiaryAlt: "#32393F", // AppBar Inputs
     neutralTertiary: "#c8c8c8",
     neutralSecondary: "#d0d0d0",
     neutralPrimaryAlt: "#dadada",

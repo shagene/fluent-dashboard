@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Nav,
   useTheme,
@@ -12,52 +11,83 @@ import { useLocation } from "react-router-dom";
 
 initializeIcons();
 
-const navLinkGroups: INavLinkGroup[] = [
-  {
-    links: [
-      {
-        name: "Dashboard",
-        url: "/",
-        icon: "Home",
-        key: "dashboard",
-      },
-      {
-        name: "Holders",
-        url: "/holders",
-        icon: "ReminderPerson",
-        key: "holders",
-      },
-      {
-        name: "Reporting",
-        url: "/reporting",
-        icon: "ReportLibrary",
-        key: "reporting",
-      },
-      {
-        name: "Work Request",
-        url: "/work-request",
-        icon: "BranchPullRequest",
-        key: "workrequest",
-      },
-      {
-        name: "Tools",
-        url: "/tools",
-        icon: "DeveloperTools",
-        key: "tools",
-      },
-      {
-        name: "FileShare",
-        url: "/fileshare",
-        icon: "TextDocumentShared",
-        key: "fileshare",
-      },
-    ],
-  },
-];
-
 const NavRail = () => {
   const theme = useTheme();
   const location = useLocation();
+
+  const navLinkGroups: INavLinkGroup[] = [
+    {
+      links: [
+        {
+          name: "Dashboard",
+          url: "/",
+          iconProps: {
+            iconName: "Home",
+            styles: {
+              root: { fontSize: 20, color: theme.palette.neutralPrimary },
+            },
+          },
+          key: "dashboard",
+        },
+        {
+          name: "Holders",
+          url: "/holders",
+          iconProps: {
+            iconName: "ReminderPerson",
+            styles: {
+              root: { fontSize: 20, color: theme.palette.neutralPrimary },
+            },
+          },
+          key: "holders",
+        },
+        {
+          name: "Reporting",
+          url: "/reporting",
+          iconProps: {
+            iconName: "ReportLibrary",
+            styles: {
+              root: { fontSize: 20, color: theme.palette.neutralPrimary },
+            },
+          },
+          key: "reporting",
+        },
+        {
+          name: "Work Request",
+          url: "/work-request",
+          iconProps: {
+            iconName: "BranchPullRequest",
+            styles: {
+              root: { fontSize: 20, color: theme.palette.neutralPrimary },
+            },
+          },
+          key: "workrequest",
+        },
+        {
+          name: "Tools",
+          url: "/tools",
+          iconProps: {
+            iconName: "DeveloperTools",
+            styles: {
+              root: { fontSize: 20, color: theme.palette.neutralPrimary },
+            },
+          },
+          key: "tools",
+        },
+        {
+          name: "FileShare",
+          url: "/fileshare",
+          iconProps: {
+            iconName: "TextDocumentShared",
+            styles: {
+              root: { fontSize: 20, color: theme.palette.neutralPrimary },
+            },
+          },
+          key: "fileshare",
+        },
+      ],
+    },
+  ];
+
   const getStyles: IStyleFunctionOrObject<INavStyleProps, INavStyles> = {
     root: {
       backgroundColor: theme.palette.neutralQuaternary,
@@ -66,6 +96,13 @@ const NavRail = () => {
       width: "15.625rem",
       boxSizing: "border-box",
       overflowY: "auto",
+      paddingLeft: "1rem",
+      paddingTop: "1rem",
+    },
+    navItem: {
+      isSelected: {
+        backgroundColor: "transparent",
+      },
     },
     link: {
       selectors: {
@@ -77,37 +114,10 @@ const NavRail = () => {
           backgroundColor: "transparent",
         },
         "&:hover .ms-Icon": {
-          color: "inherit", // Ensure icon color remains consistent on hover
+          color: "inherit",
         },
       },
     },
-  };
-
-  const onRenderLink = (link: any) => {
-    const iconStyle = { color: theme.palette.neutralPrimary };
-
-    switch (link.icon) {
-      case "Home":
-        return (
-          <span style={{ display: "flex", alignItems: "center" }}>
-            <span style={{ marginLeft: "0.5rem" }}>{link.name}</span>
-          </span>
-        );
-      case "Settings":
-        return (
-          <span style={{ display: "flex", alignItems: "center" }}>
-            <span style={{ marginLeft: "0.5rem" }}>{link.name}</span>
-          </span>
-        );
-        break;
-      default:
-        break;
-    }
-    return (
-      <span style={{ display: "flex", alignItems: "center" }}>
-        <span style={{ marginLeft: "0.5rem" }}>{link.name}</span>
-      </span>
-    );
   };
 
   return (
@@ -119,7 +129,6 @@ const NavRail = () => {
           .find((link) => link.url === location.pathname)?.key
       }
       styles={getStyles}
-      onRenderLink={onRenderLink}
     />
   );
 };
